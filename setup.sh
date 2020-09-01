@@ -18,5 +18,3 @@ docker images;
 docker run -p 9527:80 -d --name a_test a/test:$image_version;
 # 查看日志
 docker logs a_test;
-# 对空间进行自动清理
-docker system prune -a -f
