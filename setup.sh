@@ -14,7 +14,5 @@ docker images;
 docker run -p 9527:80 -d --name a_test a/test:$image_version;
 # 查看日志
 docker logs a_test;
-#删除build过程中产生的镜像    #docker image prune -a -f
-docker rmi $(docker images -f "dangling=true" -q)
 # 对空间进行自动清理
 docker system prune -a -f
