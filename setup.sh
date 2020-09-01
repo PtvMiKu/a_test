@@ -6,6 +6,10 @@ docker stop a_test || true;
 docker rm a_test || true;
 # 删除a/test镜像
 docker rmi --force $(docker images | grep a/test | awk '{print $3}')
+
+pwd
+ls /var/jenkins_home/workspace/A_test
+
 # 构建a/test:$image_version镜像
 docker build . -t a/test:$image_version;
 # 查看镜像列表
